@@ -1,0 +1,21 @@
+[package]
+name = "grpc"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+prost = "0.14.3"
+tokio = { version= "1.50.0", features = ["full"]}
+tonic = "0.14.5"
+tonic-prost = "0.14.5"
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
+
+[build-dependencies]
+tonic-prost-build = "0.14.5"
